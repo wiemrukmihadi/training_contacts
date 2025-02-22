@@ -18,12 +18,14 @@ Long description of module's purpose
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base', 'sale_management', 'purchase'],
 
     # always loaded
     'data': [
         'security/res_groups.xml',
         'security/ir.model.access.csv',
+        'views/trainingcontacts_approval_view.xml',
+        'views/purchase_order_view.xml',
         'views/trainingcontacts_approval_view.xml',
         'views/trainingcontacts_menu.xml',
     ],
