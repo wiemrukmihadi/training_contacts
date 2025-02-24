@@ -25,6 +25,7 @@ Long description of module's purpose
         'security/res_groups.xml',
         'security/ir.model.access.csv',
         'views/trainingcontacts_approval_view.xml',
+        'views/sale_order_view.xml',
         'views/purchase_order_view.xml',
         'views/trainingcontacts_approval_view.xml',
         'views/trainingcontacts_menu.xml',
