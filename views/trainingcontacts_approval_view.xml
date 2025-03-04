@@ -12,9 +12,10 @@
             <field name="arch" type="xml">
                  <xpath expr="//sheet" position="before">
                     <header>
-                        <button name="action_approve" invisible="approval_status in('approved', 'rejected')" string="Approve" type="object" class="btn-primary" />
-                        <button name="action_cancel" invisible="approval_status in('approved', 'rejected')" string="Cancel" type="object" class="btn-secondary"/>
-                        <button name="action_reset" invisible="approval_status in('draft')" string="Reset" type="object" class="btn-secondary"/>
+                        <field name="is_admin" invisible="1"/>
+                        <button name="action_approve" invisible="approval_status in('approved', 'rejected') or not is_admin" string="Approve" type="object" class="btn-primary" />
+                        <button name="action_cancel" invisible="approval_status in('approved', 'rejected') or not is_admin" string="Cancel" type="object" class="btn-secondary"/>
+                        <button name="action_reset" invisible="approval_status in('draft') or not is_admin" string="Reset" type="object" class="btn-secondary"/>
                         <field name="approval_status" widget="statusbar" options="{'clickable': False}" readonly="approval_status in('approved', 'rejected')"/>
                         <!-- <field name="approval_status" widget="statusbar" options="{'clickable': True}" readonly="approval_status in('approved', 'rejected')"/> -->
                     </header>
